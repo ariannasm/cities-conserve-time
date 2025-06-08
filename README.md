@@ -2,7 +2,7 @@
 
 Instructions for reproducing all figures using the .do and .ipynb files in the replication package, as well as software requirements and necessary inputs, are below. Figure-[1-4].do and Figure-SI6.do have been tested on Stata 16 and 17, while the remaining .ipynb files have been tested in Jupyter running  Python 3.10.14. Each of these scripts should take no more than 10 seconds to run.
 
-The replication package also contains scripts in the folder “spectus_scripts”, which were run on Spectus’s platform and created various inputs for our .do and .ipynb files. While these will not run as-is, they would run on Spectus’s platform if anyone wishing to replicate the study has access.
+The replication package includes a `spectus_scripts` folder containing scripts that run on Spectus’s platform to generate inputs for our `.do` and `.ipynb` files. Running these scripts requires access to the raw Cuebiq mobility data via the Spectus platform.
 
 
 Figure-2.do  
