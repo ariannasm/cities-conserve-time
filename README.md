@@ -7,25 +7,15 @@ The replication package also contains scripts in the folder â€œspectus_scriptsâ€
 
 Figure-2.do  
 ------------------------------------------------------------------------------  
-Purpose:  
-  Generate Figure 2 (panels A & B) illustrating how total travel time scales  
-  with city population using the MSA-level mobility data.  
+- Figure 2 (panels A & B) illustrating how total travel time scales with city population using the MSA-level mobility data.  
 
 Figure-3.do  
 ------------------------------------------------------------------------------  
-Purpose:  
-  Generate Figure 3: travel time scaling analysis for non-U.S. Functional Urban Areas  
-  across four countries (Indonesia (id), India (in), Mexico (mx), Nigeria (ng)).  
-  Panel A shows semi-elasticity of total travel time per person vs log-population.  
-  Panel B shows elasticity of log-transformed travel time vs log-population.  
+- Figure 3: travel time scaling analysis for non-U.S. Functional Urban Areas across four countries (Indonesia (id), India (in), Mexico (mx), Nigeria (ng)). Panel A shows semi-elasticity of total travel time per person vs log-population. Panel B shows elasticity of log-transformed travel time vs log-population.  
 
 Figure-4.do  
 ------------------------------------------------------------------------------  
-Purpose:  
-  Generate Figure 4:  
-  Panel A: effective number of centers vs population.  
-  Panel B: building density vs population.  
-  Panel C: travel speed vs population.  
+- Figure 4: Panel A: effective number of centers vs population. Panel B: building density vs population.Panel C: travel speed vs population.  
 
 Figure-5.ipynb  
 ------------------------------------------------------------------------------  
