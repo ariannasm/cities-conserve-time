@@ -1,6 +1,6 @@
 # cities-conserve-time
 
-Instructions for reproducing all figures in the paper *Cities Adapt to Conserve Travel Time* by Arianna Salazar-Miranda, Cate Heine, Lei Dong, Paolo Santi, and Carlo Ratti using the `.do` and `.ipynb` files in the replication package. Software requirements and necessary inputs are listed below.
+Instructions for reproducing all figures in the paper *Cities Adapt to Conserve Travel Time* by Arianna Salazar-Miranda, Cate Heine, Lei Dong, Paolo Santi, and Carlo Ratti. Software requirements and necessary inputs are listed below.
 
 - The Stata scripts (`Figure-1.do` through `Figure-4.do` and `Figure-SI6.do`) have been tested on Stata 17.  
 - The Jupyter notebooks (`.ipynb`) have been tested on Python 3.10.14 in Jupyter.  
