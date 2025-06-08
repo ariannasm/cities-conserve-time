@@ -10,17 +10,19 @@ The replication package also contains scripts in the folder â€œspectus_scriptsâ€
 Generate Figure 2 (panels A & B) illustrating how total travel time scales with city population using the MSA-level mobility data.
 
 **Usage**  
-In Stata 16 or higher, run: do Figure-2.do
-**Requirements**  
-Stata 16+ (tested on 17)
-Output from 01_construct_msa_data.do: 
-- data/clean/2019_clean_msa-<filter>.dta
+```stata
+do Figure-2.do
+```
 
-Directory for saving figures:
-- figures/fig1.png
+**Requirements**  
+- Stata 16+ (tested on 17)  
+- Output from `01_construct_msa_data.do`:  
+  - `data/clean/2019_clean_msa-<filter>.dta`  
+- Directory for saving figures:  
+  - `figures/fig1.png`
 
 **Outputs**
-figures/fig2.png
+- `figures/fig2.png`
 
-Note:
-This script uses the same filter number (<filter>) defined in 01_construct_msa_data.do.
+**Note**  
+This script uses the same filter number (`<filter>`) defined in `01_construct_msa_data.do`.  
