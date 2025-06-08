@@ -1,9 +1,12 @@
 # cities-conserve-time
 
-Instructions for reproducing all figures using the .do and .ipynb files in the replication package, as well as software requirements and necessary inputs, are below. Figure-[1-4].do and Figure-SI6.do have been tested on Stata 16 and 17, while the remaining .ipynb files have been tested in Jupyter running  Python 3.10.14. Each of these scripts should take no more than 10 seconds to run.
+Instructions for reproducing all figures in the paper *Cities Adapt to Conserve Travel Time* by Arianna Salazar-Miranda, Cate Heine, Lei Dong, Paolo Santi, and Carlo Ratti using the `.do` and `.ipynb` files in the replication package. Software requirements and necessary inputs are listed below.
 
-The replication package includes a `spectus_scripts` folder containing scripts that run on Spectus’s platform to generate inputs for our `.do` and `.ipynb` files. Running these scripts requires access to the raw Cuebiq mobility data via the Spectus platform.
+- The Stata scripts (`Figure-1.do` through `Figure-4.do` and `Figure-SI6.do`) have been tested on Stata 17.  
+- The Jupyter notebooks (`.ipynb`) have been tested on Python 3.10.14 in Jupyter.  
+- Each script executes in under 10 seconds.
 
+The replication package also includes a `spectus_scripts` folder containing scripts that run on Spectus’s platform to generate inputs for our `.do` and `.ipynb` files. Access to the raw Cuebiq mobility data via the Spectus platform is required to run these scripts.  
 
 Figure-2.do  
 ------------------------------------------------------------------------------  
