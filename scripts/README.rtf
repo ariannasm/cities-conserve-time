@@ -1,0 +1,261 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16320\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Instructions for reproducing all figures using the .do and .ipynb files in the replication package, as well as software requirements and necessary inputs, are below. Figure-[1-4].do and Figure-SI6.do have been tested on Stata 16 and 17, while the remaining .ipynb files have been tested in Jupyter running  Python 3.10.14. Each of these scripts should take no more than 10 seconds to run.\
+\
+The replication package also contains scripts in the folder \'93spectus_scripts\'94, which were run on Spectus\'92s platform and created various inputs for our .do and .ipynb files. While these will not run as-is, they would run on Spectus\'92s platform if anyone wishing to replicate the study has access.
+\f1\b \
+\
+Figure-2.do
+\f0\b0 \
+------------------------------------------------------------------------------\
+Purpose:\
+  Generate Figure 2 (panels A & B) illustrating how total travel time scales\
+  with city population using the MSA-level mobility data.\
+\
+Usage:\
+  In Stata 16 or higher, run:\
+    do Figure-2.do\
+\
+Requirements:\
+  \'95 Stata 16+ (tested on 17)\
+  \'95 Output from 01_construct_msa_data.do:\
+      data/clean/2019_clean_msa-<filter>.dta\
+  \'95 Directory for saving figures:\
+      figures/fig1.png\
+\
+Outputs:\
+  \'95 figures/fig2.png\
+\
+Note:\
+  This script uses the same filter number (<filter>) defined in\
+  01_construct_msa_data.do.\
+\
+
+\f1\b Figure-3.do\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:\
+  Generate Figure 3: travel time scaling analysis for non-U.S. Functional Urban Areas\
+  across four countries (Indonesia (id), India (in), Mexico (mx), Nigeria (ng)).\
+  Panel A shows semi-elasticity of total travel time per person vs log-population.\
+  Panel B shows elasticity of log-transformed travel time vs log-population.\
+\
+Usage:\
+  In Stata 16 or higher, run:\
+    do Figure-3.do\
+\
+Requirements:\
+  \'95 Stata 16+ (tested on 17)\
+  \'95 Cleaned non-US mobility CSVs in data/mobility/:\
+      metrics_id.csv, metrics_in.csv, metrics_mx.csv, metrics_ng.csv\
+\
+Outputs:\
+  \'95 figures/fig3.png\
+\
+
+\f1\b Figure-4.do\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:\
+  Generate Figure 4:\
+  Panel A: effective number of centers vs population.\
+  Panel B: building density vs population.\
+  Panel C: travel speed vs population.\
+\
+Usage:\
+  In Stata 16 or higher, run:\
+    do Figure-4.do\
+\
+Requirements:\
+  \'95 Stata 16+ (tested on 17)\
+  \'95 Output from 01_construct_msa_data.do:\
+      data/clean/2019_clean_msa-<filter>.dta\
+\
+Outputs:\
+  \'95 figures/fig4.png\
+\
+
+\f1\b Figure-5.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure 5 (panels A & B) illustrating sample representativeness across months and CBSAs. \
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4, scipy 1.13.0, statsmodels 0.14.1\
+\
+Inputs:\
+- sample_size_cbsa (CBSA-level sample size, produced on Spectus platform using process_trips_into_outputs_us.ipynb)\
+- nhgis0030_ds258_2020_cbsa.csv (2020 CBSA-level populations Downloaded from NHGIS)\
+\
+Outputs:\
+- figures/fig5.png\
+\
+
+\f1\b Figure-6.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure 6 (panels A - D) illustrating data quality for our US sample (pings per trip, pings per day, time between pings, trips per day). \
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4\
+\
+Inputs:\
+- trips_per_day (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- pings_per_day (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- pings_per_trip (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- trips_per_day (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+\
+Outputs:\
+- figures/fig6.png\
+\
+
+\f1\b Figure-SI1.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure SI1 (panels A - D) illustrating sample representativeness by month across countries. \
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4\
+\
+Inputs:\
+- sample_nonus/sample_sizes_fua_\{country\}.csv (FUA-level sample size, produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- FUA.csv (FUA-level population, produced from Global Human Settlement Layer data using processing_GHSL.ipynb)\
+\
+Outputs:\
+- figures/figSI1.png\
+\
+
+\f1\b Figure-SI2.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure SI2 (panels A & B) illustrating sample representativeness across countries/functional urban areas. \
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4, scipy 1.13.0, statsmodels 0.14.1\
+\
+Inputs:\
+- sample_nonus/sample_sizes_fua_\{country\}.csv (FUA-level sample size, produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- FUA.csv (FUA-level population, produced from Global Human Settlement Layer data using processing_GHSL.ipynb)\
+\
+Outputs:\
+- figures/figSI1.png\
+\
+
+\f1\b Figure-SI3.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure SI3 (panels A - D) illustrating data quality across countries. \
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4\
+\
+Inputs:\
+- sample_nonus/\{table_type\}_\{country\}.csv, for:\
+  - table_type in ['pings_per_day','pings_per_trip','trips_per_day','ping_time']\
+  - country in ['NG','MX','IN','ID']\
+  - produced on Spectus platform using process_trips_into_outputs_intl.ipynb\
+\
+Outputs:\
+- figures/figSI3.png\
+\
+
+\f1\b Figure-SI4.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure SI4 (panels A & B) illustrating representativeness across CBSA and month by various filters.\
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4, scipy 1.13.0, statsmodels 0.14.1\
+\
+Inputs:\
+- sample_size_cbsa (CBSA-level sample size, produced on Spectus platform using process_trips_into_outputs_us.ipynb)\
+- nhgis0030_ds258_2020_cbsa.csv (2020 CBSA-level populations Downloaded from NHGIS)\
+\
+Outputs:\
+- figures/figSI4.png\
+\
+
+\f1\b Figure-SI5.ipynb\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:  \
+- Generate Figure SI5 (panels A - D) illustrating data quality for our US sample (pings per trip, pings per day, time between pings, trips per day), by our various filters. \
+\
+Usage:\
+- Change fp variable to replication filepath.\
+- Run all cells.\
+  \
+Requirements:\
+- Python 3\
+- Packages: matplotlib 3.9.2, pandas 2.2.2, numpy 1.26.4\
+\
+Inputs:\
+- trips_per_day (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- pings_per_day (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- pings_per_trip (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+- trips_per_day (produced on Spectus platform using process_trips_into_outputs_intl.ipynb)\
+\
+Outputs:\
+- figures/figSI5.png\
+\
+
+\f1\b Figure-SI6.do\
+
+\f0\b0 ------------------------------------------------------------------------------\
+Purpose:\
+  Variation of Figure 4 Panel B: plot Herfindahl index vs city population\
+  in place of the effective number of centers.\
+\
+Usage:\
+  In Stata 16 or higher, run:\
+    do Figure-SI6.do\
+\
+Requirements:\
+  \'95 Stata 16+ (tested on 17)\
+  \'95 Output from 01_construct_msa_data.do:\
+      data/clean/2019_clean_msa-<filter>.dta\
+\
+Outputs:\
+  \'95 figures/figSI6.png\
+}
